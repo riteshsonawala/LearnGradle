@@ -27,7 +27,9 @@ tasks.register("MyTask"){
 task(Task1){
     group="First"
     description="My second gradle task"
+    dependsOn MyTask
     doLast{
         println "Something"
     }
+
 }
