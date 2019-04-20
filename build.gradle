@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'com.rs'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+tasks.register("MyTask"){
+
+    setGroup("First")
+    setDescription("My first gradle task")
+    doLast{
+        println("My first gradle task")
+    }
+}
+
+task(Task1){
+    group="First"
+    description="My second gradle task"
+    doLast{
+        println "Something"
+    }
+}
